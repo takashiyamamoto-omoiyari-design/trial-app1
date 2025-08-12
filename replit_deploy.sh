@@ -21,19 +21,7 @@ if [ -f .env ]; then
   echo "環境変数ファイルを読み込みます"
   source .env
 else
-  echo "環境変数ファイルが見つかりません。デフォルト設定を使用します。"
-  
-  # MSPSeimei関連の環境変数を明示的に設定
-  export MSPSeimei__AzureSearchEndpoint="https://iluragsearch.search.windows.net"
-  export MSPSeimei__AzureSearchKey="Gt6kwOhyZKs0ICnOV17JBljGDwiacTHxKstsIaS7BDAzSeCR55N9"
-  export MSPSeimei__AzureSearchApiVersion="2020-06-30"
-  export MSPSeimei__MainIndexName="mspseimei"
-  export MSPSeimei__SentenceIndexName="mspseimei-sentence"
-  export MSPSeimei__AzureOpenAIEndpoint="https://openai-gpt-forrag.openai.azure.com"
-  export MSPSeimei__AzureOpenAIKey="5c05fc27ca534abbae6a6cee6d9d0b41"
-  export MSPSeimei__AzureOpenAIApiVersion="2023-05-15"
-  export MSPSeimei__ChatModelDeployment="gpt4o-forRAG"
-  export MSPSeimei__EmbeddingModelDeployment="text-embedding-3-large"
+  echo "環境変数ファイルが見つかりません。デフォルトの機密値注入は行いません。"
 fi
 
 # 環境変数の確認
